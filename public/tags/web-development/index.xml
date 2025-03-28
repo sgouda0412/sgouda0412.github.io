@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Development on Santosh Kumar Gouda</title>
-    <link>/tags/web-development/</link>
+    <link>https://sgouda0412.github.io/tags/web-development/</link>
     <description>Recent content in Web Development on Santosh Kumar Gouda</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© santosh kumar gouda</copyright>
     <lastBuildDate>Thu, 20 Mar 2025 12:00:00 +0100</lastBuildDate>
-    <atom:link href="/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sgouda0412.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up a Website in Hugo: A Complete Guide</title>
-      <link>/posts/setting-up-hugo-blog-post/</link>
+      <link>https://sgouda0412.github.io/posts/setting-up-hugo-blog-post/</link>
       <pubDate>Thu, 20 Mar 2025 12:00:00 +0100</pubDate>
-      <guid>/posts/setting-up-hugo-blog-post/</guid>
+      <guid>https://sgouda0412.github.io/posts/setting-up-hugo-blog-post/</guid>
       <description>Hugo is one of the most popular open-source static site generators available today. Known for its blazing-fast build times and flexibility, Hugo makes creating websites simple and enjoyable. This guide will walk you through setting up a Hugo website with the Archie theme and deploying it to GitHub Pages.&#xA;Prerequisites Basic knowledge of Git and command line GitHub account Text editor of your choice Installing Hugo Start by downloading and installing Hugo:</description>
     </item>
   </channel>
