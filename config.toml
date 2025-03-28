@@ -9,6 +9,7 @@ pygmentscodefencesguesssyntax = true
 # googleAnalytics = ''
 [params]
 	mode="auto"
+	forceSSL = true
 	useCDN=false
 	subtitle = "All things Data Engineering by Data Engineer"
 

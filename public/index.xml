@@ -2,32 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Santosh Kumar Gouda</title>
-    <link>https://sgouda0412.github.io/</link>
+    <link>https://santoshnitn.com/</link>
     <description>Recent content on Santosh Kumar Gouda</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© santosh kumar gouda</copyright>
-    <lastBuildDate>Thu, 27 Mar 2025 17:07:06 +0530</lastBuildDate>
-    <atom:link href="https://sgouda0412.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Mar 2025 17:50:48 +0530</lastBuildDate>
+    <atom:link href="https://santoshnitn.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Welcome to Hugo</title>
-      <link>https://sgouda0412.github.io/posts/my-first-post/</link>
-      <pubDate>Thu, 27 Mar 2025 17:07:06 +0530</pubDate>
-      <guid>https://sgouda0412.github.io/posts/my-first-post/</guid>
-      <description>Hello world! This is my first Hugo blog post.</description>
+      <title>🛠️ Essential Git Commands for Data Engineers: A Practical Guide</title>
+      <link>https://santoshnitn.com/posts/git_for_data_engineer/</link>
+      <pubDate>Fri, 28 Mar 2025 17:50:48 +0530</pubDate>
+      <guid>https://santoshnitn.com/posts/git_for_data_engineer/</guid>
+      <description>Git is an indispensable tool for data engineers managing code, configurations, and data pipelines. This guide covers essential Git commands with practical examples tailored for data workflows.&#xA;🔍 git diff - Inspecting Changes 📌 Use case: Review modifications before staging or committing&#xA;# Show unstaged changes git diff # Compare staged changes with last commit git diff --cached # Compare between two branches git diff main..feature-branch # Check changes to specific file git diff data_pipeline.</description>
+    </item>
+    <item>
+      <title>🐧 Linux for Data Engineers: `grep`, `sed`, and `awk`</title>
+      <link>https://santoshnitn.com/posts/linux_for_data_engineer/</link>
+      <pubDate>Fri, 28 Mar 2025 16:00:34 +0530</pubDate>
+      <guid>https://santoshnitn.com/posts/linux_for_data_engineer/</guid>
+      <description>🔎 grep - Searching in Text Files grep (Global Regular Expression Print) is used to search for patterns in files.&#xA;📌 Basic Usage # Find lines containing &amp;#39;error&amp;#39; in log.txt grep &amp;#39;error&amp;#39; log.txt 🎯 Common Options Option Description -i Ignore case -v Invert match (show lines NOT matching) -c Count occurrences -n Show line numbers -r Recursive search --color=auto Highlight matches 🏆 Examples # Find all occurrences of &amp;#39;warning&amp;#39; (case-insensitive) in logs grep -i &amp;#39;warning&amp;#39; server.</description>
     </item>
     <item>
       <title>💻 About Me: Senior Data Engineer</title>
-      <link>https://sgouda0412.github.io/about/</link>
+      <link>https://santoshnitn.com/about/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://sgouda0412.github.io/about/</guid>
+      <guid>https://santoshnitn.com/about/</guid>
       <description>Hello! 👋&#xA;I&amp;rsquo;m Santosh Kumar Gouda, a Senior Data Engineer with 8.5+ years of experience architecting cloud-native data solutions. I transform complex data challenges into scalable, cost-efficient systems—proven by 40%+ performance gains across multiple enterprises.&#xA;🛠️ Technical Arsenal 🧰 Core Stack Category Technologies Cloud Platforms AWS (Glue, Redshift, S3, EMR, Lambda, RDS, ), Azure (Data Factory, Databricks, Synapse) Big Data PySpark, Airflow, Kafka, Snowflake, Delta Lake Databases PostgreSQL, MySQL, MongoDB, Azure SQL, Redshift DataOps dbt, Great Expectations,, Kubernetes, Docker, CI/CD 💼 Professional Journey 🚀 Data Analytic Tech Lead 📍 Sears Global Technologies | Nov 2022 - Present | Pune</description>
     </item>
     <item>
       <title>Setting Up a Website in Hugo: A Complete Guide</title>
-      <link>https://sgouda0412.github.io/posts/setting-up-hugo-blog-post/</link>
+      <link>https://santoshnitn.com/posts/setting-up-hugo-blog-post/</link>
       <pubDate>Thu, 20 Mar 2025 12:00:00 +0100</pubDate>
-      <guid>https://sgouda0412.github.io/posts/setting-up-hugo-blog-post/</guid>
+      <guid>https://santoshnitn.com/posts/setting-up-hugo-blog-post/</guid>
       <description>Hugo is one of the most popular open-source static site generators available today. Known for its blazing-fast build times and flexibility, Hugo makes creating websites simple and enjoyable. This guide will walk you through setting up a Hugo website with the Archie theme and deploying it to GitHub Pages.&#xA;Prerequisites Basic knowledge of Git and command line GitHub account Text editor of your choice Installing Hugo Start by downloading and installing Hugo:</description>
     </item>
   </channel>
