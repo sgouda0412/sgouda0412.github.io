@@ -1,229 +1,116 @@
 +++
-title = 'Linux for Data Engineers: Essential Commands and Tools'
+title = '🐧 Linux for Data Engineers: `grep`, `sed`, and `awk`'
 date = 2025-03-28T16:00:34+05:30
 draft = false
 author = 'Santosh Kumar Gouda'
 +++
 
 
-As a data engineer, mastering Linux is crucial for efficient data processing, pipeline management, and server administration. This guide covers essential Linux commands, tools, and concepts that every data engineer should know.
+## 🔎 `grep` - Searching in Text Files
 
-## Table of Contents
-1. [File System Navigation](#file-system-navigation)
-2. [File Operations](#file-operations)
-3. [Text Processing](#text-processing)
-4. [System Monitoring](#system-monitoring)
-5. [Networking](#networking)
-6. [Package Management](#package-management)
-7. [Process Management](#process-management)
-8. [Shell Scripting Basics](#shell-scripting-basics)
-9. [Data-Specific Tools](#data-specific-tools)
-10. [Useful Shortcuts](#useful-shortcuts)
+`grep` (Global Regular Expression Print) is used to search for patterns in files.
 
-## File System Navigation
+### 📌 Basic Usage
+```sh
+# Find lines containing 'error' in log.txt
+grep 'error' log.txt
+```
 
-```bash
-# List files with details
-ls -lah
+### 🎯 Common Options
+| Option  | Description |
+|---------|-------------|
+| `-i`    | Ignore case |
+| `-v`    | Invert match (show lines NOT matching) |
+| `-c`    | Count occurrences |
+| `-n`    | Show line numbers |
+| `-r`    | Recursive search |
+| `--color=auto` | Highlight matches |
 
-# Show current directory
-pwd
+### 🏆 Examples
+```sh
+# Find all occurrences of 'warning' (case-insensitive) in logs
+grep -i 'warning' server.log
 
-# Change directory
-cd /path/to/directory
+# Show lines NOT containing 'failed'
+grep -v 'failed' report.txt
 
-# Go to home directory
-cd ~
+# Count occurrences of 'success'
+grep -c 'success' results.csv
+```
 
-# Find files (great for locating datasets)
-find /data -name "*.csv" -type f
+---
 
-# Disk usage analysis (critical for managing large datasets)
-du -sh /data/lake/
-df -h
-File Operations
-bash
-Copy
-# View file contents
-cat large_file.json | jq  # with jq for JSON prettifying
-head -n 100 data.csv      # first 100 lines
-tail -f logfile.log       # follow log in real-time
+## ✂️ `sed` - Stream Editor for Modifying Text
 
-# Search within files (grep is your best friend)
-grep "error" *.log
-grep -r "pattern" /data/  # recursive search
+`sed` (Stream Editor) is used to find and replace text, delete lines, or modify files.
 
-# Compare files
-diff file1.csv file2.csv
+### 📌 Basic Usage
+```sh
+# Replace 'foo' with 'bar' in a file
+sed 's/foo/bar/g' file.txt
+```
 
-# File manipulation
-cut -d',' -f1,3 data.csv      # extract columns
-sort data.txt | uniq -c       # count unique values
-awk -F',' '{print $1}' data.csv  # awk for column extraction
+### 🎯 Common Options
+| Option  | Description |
+|---------|-------------|
+| `-i`    | Edit file in place |
+| `s`     | Substitute text |
+| `g`     | Replace all occurrences |
+| `d`     | Delete lines |
+| `p`     | Print lines |
 
-# Compression (essential for big data)
-tar -czvf archive.tar.gz /data/
-pigz -k large_file.csv        # parallel gzip
-Text Processing
-bash
-Copy
-# Count lines in a file (useful for data validation)
-wc -l huge_dataset.csv
+### 🏆 Examples
+```sh
+# Replace all instances of '2023' with '2024' in data.csv (modify in place)
+sed -i 's/2023/2024/g' data.csv
 
-# Stream editor for transformations
-sed 's/old/new/g' file.txt
-sed -i '1d' data.csv  # remove header row
+# Delete lines containing 'error'
+sed '/error/d' logs.txt
 
-# Advanced text processing with awk
-awk 'BEGIN {FS=","; OFS="|"} {print $1,$3,$5}' data.csv
-awk -F',' '$3 > 100 {print $0}' sales.csv  # filter rows
+# Print lines 1 to 5
+sed -n '1,5p' file.txt
+```
 
-# CSV specific tools
-csvcut -c 1,3,5 data.csv      # from csvkit
-csvsql --query "SELECT * FROM data WHERE amount > 100" data.csv
-System Monitoring
-bash
-Copy
-# Check system resources
-top
-htop        # more user-friendly
-glances     # comprehensive monitoring
+---
 
-# Memory usage
-free -h
+## 📊 `awk` - Pattern Scanning and Processing Language
 
-# Check CPU info
-lscpu
+`awk` is used for text manipulation, filtering, and reporting.
 
-# Monitor disk I/O
-iotop
-iostat -x 1
+### 📌 Basic Usage
+```sh
+# Print the first column from a CSV file
+awk -F, '{print $1}' data.csv
+```
 
-# Check running processes
-ps aux | grep python
-Networking
-bash
-Copy
-# Check network connections
-netstat -tulnp
-ss -tulnp      # modern alternative
+### 🎯 Common Options
+| Option  | Description |
+|---------|-------------|
+| `-F`    | Set field delimiter |
+| `$1, $2` | Refer to specific columns |
+| `NR`    | Line number |
+| `NF`    | Number of fields |
 
-# Test connectivity
-ping google.com
-curl -I https://api.example.com  # check HTTP headers
+### 🏆 Examples
+```sh
+# Print the second column from a space-separated file
+awk '{print $2}' records.txt
 
-# Download files
-wget https://example.com/data.zip
-curl -O https://example.com/data.csv
+# Print lines where the third column is greater than 100
+awk '$3 > 100' sales.csv
 
-# SSH (essential for remote servers)
-ssh user@server
-scp data.csv user@server:/path/to/destination/
-rsync -avz /local/data/ user@remote:/backup/data/  # efficient sync
-Package Management
-bash
-Copy
-# Ubuntu/Debian
-sudo apt update
-sudo apt install python3-pip
+# Sum values in the second column
+awk '{sum += $2} END {print sum}' data.txt
+```
 
-# CentOS/RHEL
-sudo yum install epel-release
-sudo yum install python3
+---
 
-# Python packages
-pip install pandas numpy
-pip freeze > requirements.txt
+## 🎯 Combining `grep`, `sed`, and `awk`
 
-# Conda environments
-conda create -n data-env python=3.8
-conda activate data-env
-Process Management
-bash
-Copy
-# Run process in background
-python etl_script.py &
+```sh
+# Extract error lines, replace 'fail' with 'error', and print first column
+grep 'error' logs.txt | sed 's/fail/error/g' | awk '{print $1}'
+```
 
-# List jobs
-jobs
+🚀 These tools are essential for processing large text-based datasets efficiently! Happy coding! 🎉
 
-# Bring to foreground
-fg %1
-
-# Disown process to keep running after logout
-disown -h %1
-
-# Run process that survives terminal close
-nohup python pipeline.py > output.log 2>&1 &
-
-# Schedule jobs with cron
-crontab -e
-# Add line: 0 3 * * * /path/to/backup_script.sh
-Shell Scripting Basics
-bash
-Copy
-#!/bin/bash
-
-# Simple ETL script example
-INPUT_FILE=$1
-OUTPUT_FILE=$2
-
-if [ ! -f "$INPUT_FILE" ]; then
-    echo "Error: Input file not found!"
-    exit 1
-fi
-
-# Process data
-echo "Processing $INPUT_FILE..."
-awk -F',' '{print $1","$3","$5}' "$INPUT_FILE" | \
-    grep -v "bad_data" > temp.csv
-
-# Add timestamp
-TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-sed -i "1i processed_at,$TIMESTAMP" temp.csv
-
-mv temp.csv "$OUTPUT_FILE"
-echo "Output saved to $OUTPUT_FILE"
-Data-Specific Tools
-bash
-Copy
-# Convert JSON to CSV
-jq -r '. | [.field1, .field2] | @csv' data.json > output.csv
-
-# CSV processing with Miller
-mlr --csv cut -f date,value then sort -n value data.csv
-
-# Parquet tools
-parquet-tools head data.parquet
-parquet-tools schema data.parquet
-
-# Database clients
-psql -h dbhost -U user -d database
-mysql -u user -p database -e "SELECT * FROM table"
-
-# Hadoop ecosystem
-hdfs dfs -ls /data/
-hdfs dfs -put localfile.csv /data/
-Useful Shortcuts
-bash
-Copy
-Ctrl+C        # Kill current process
-Ctrl+Z        # Suspend process
-Ctrl+D        # EOF (logout if empty line)
-Ctrl+R        # Search command history
-!!            # Repeat last command
-!$            # Last argument of previous command
-Conclusion
-Mastering these Linux commands and tools will significantly boost your productivity as a data engineer. The command line is your most powerful tool for data manipulation, pipeline management, and server administration.
-
-Remember to always:
-
-Check manual pages with man command
-
-Use --help for quick command reference
-
-Test commands with small datasets before applying to production data
-
-Chain commands with pipes (|) for complex data transformations
-
-Happy data engineering!
