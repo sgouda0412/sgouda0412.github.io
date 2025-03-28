@@ -7,6 +7,8 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 # googleAnalytics = ''
+relativeURLs = false
+canonifyURLs = true
 [params]
 	mode="auto"
 	forceSSL = true
