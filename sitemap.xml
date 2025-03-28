@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2025-03-27T17:07:06+05:30</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2025-03-27T17:07:06+05:30</lastmod>
+  </url><url>
+    <loc>/posts/my-first-post/</loc>
+    <lastmod>2025-03-27T17:07:06+05:30</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/github-pages/</loc>
+    <lastmod>2025-03-20T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2025-03-20T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>/posts/setting-up-hugo-blog-post/</loc>
+    <lastmod>2025-03-20T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2025-03-20T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>/tags/web-development/</loc>
+    <lastmod>2025-03-20T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+  </url>
+</urlset>
