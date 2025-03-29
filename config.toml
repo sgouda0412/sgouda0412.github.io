@@ -6,7 +6,8 @@ copyright = "© santosh kumar gouda"
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
-# googleAnalytics = ''
+paginate=6 # articles per page
+googleAnalytics = 'G-1SJMJ1QCL7'
 relativeURLs = false
 canonifyURLs = true
 [params]
