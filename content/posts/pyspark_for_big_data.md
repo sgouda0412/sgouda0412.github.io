@@ -3,7 +3,7 @@ title = '🚀 Handling Large Data Volumes (100GB — 1TB) in PySpark: Best Pract
 date = 2025-03-29T19:32:02+05:30
 draft = false
 author = 'Santosh Kumar Gouda'
-tags: ["PySpark", "Big Data"]
+tags = ["PySpark", "Big Data"]
 +++
 
 
