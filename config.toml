@@ -11,7 +11,7 @@ googleAnalytics = 'G-1SJMJ1QCL7'
 relativeURLs = false
 canonifyURLs = true
 [params]
-	mode="auto"
+	mode="dark"
 	forceSSL = true
 	useCDN=false
 	subtitle = "All things Data Engineering by Data Engineer"
