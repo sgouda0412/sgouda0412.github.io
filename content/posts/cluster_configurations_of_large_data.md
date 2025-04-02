@@ -344,7 +344,7 @@ df.repartition(100).write.parquet("s3://output/")
 
 ## 🏁 Conclusion
 
-Processing 100GB–1TB files in PySpark requires:
+Processing 500GB–1TB files in PySpark requires:
 - ✔️ Proper cluster configuration
 - ✔️ Efficient file formats (Parquet/ORC)
 - ✔️ Optimal partitioning & parallelism
