@@ -1,5 +1,5 @@
 +++
-title = '# 🚀 What 99% of PySpark Users Get Wrong About Processing Large Files (500GB-1TB)'
+title = '🚀 What 99% of PySpark Users Get Wrong About Processing Large Files (500GB-1TB)'
 date = 2025-04-02T10:03:26+05:30
 draft = false
 tags = ['pyspark']
